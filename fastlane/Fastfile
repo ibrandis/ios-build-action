@@ -49,8 +49,10 @@ platform :ios do
     end
 
     update_code_signing_settings(
-      use_automatic_signing: false,
+      code_sign_identity: "Apple Distribution",
+      profile_name: "Distribution_profile",
       path: ENV['PROJECT_PATH'],
+      team_id: ENV['TEAM_ID']
       targets: update_targets
     )
 
